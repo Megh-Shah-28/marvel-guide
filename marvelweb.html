@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Guide - Ultimate Timeline & Database</title>
+    <link rel="stylesheet" href="marvelweb.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="marvel-header">
+        <div class="logo-container">
+            <i class="fa-solid fa-shield-halved logo-icon"></i>
+            <h1>MARVEL <span class="highlight">GUIDE</span></h1>
+        </div>
+        <div class="search-bar-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search movies, shows, series...">
+        </div>
+        <nav class="nav-links">
+            <a href="#timelineSection" class="active"><i class="fa-solid fa-film"></i> Timeline</a>
+            <a href="#doomsdaySection"><i class="fa-solid fa-road"></i> Road to Doomsday</a>
+            <a href="#quizSection"><i class="fa-solid fa-brain"></i> Quiz</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h2>THE MULTIVERSE AWAITS</h2>
+            <p>Explore every movie, series, and special presentation from Phase 1 to Phase 6 in chronological order. Dive into detailed stories, test your mastery with the interactive quiz, and prep for Doomsday!</p>
+            <div class="hero-buttons">
+                <a href="#timelineSection" class="btn-primary">Explore Phases</a>
+                <a href="#doomsdaySection" class="btn-secondary">Road to Doomsday</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="main-container">
+
+        <!-- Phase Tabs & Timeline Section -->
+        <section id="timelineSection" class="timeline-section">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-timeline"></i> MCU Chronological Master Timeline</h2>
+                <p>Click any title to uncover its detailed plot and cinematic history.</p>
+            </div>
+
+            <!-- Phase Navigation Tabs -->
+            <div class="phase-tabs" id="phaseTabs">
+                <button class="tab-btn active" data-phase="all">All Phases</button>
+                <button class="tab-btn" data-phase="1">Phase 1</button>
+                <button class="tab-btn" data-phase="2">Phase 2</button>
+                <button class="tab-btn" data-phase="3">Phase 3</button>
+                <button class="tab-btn" data-phase="4">Phase 4</button>
+                <button class="tab-btn" data-phase="5">Phase 5</button>
+                <button class="tab-btn" data-phase="6">Phase 6</button>
+            </div>
+
+            <!-- Movie Cards Grid -->
+            <div class="movies-grid" id="moviesGrid">
+                <!-- Dynamically populated by marvelweb.js -->
+            </div>
+        </section>
+
+        <!-- Road to Doomsday Highway Section -->
+        <section id="doomsdaySection" class="doomsday-section">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-road"></i> Road to Avengers: Doomsday</h2>
+                <p>The essential official watch path leading up to Avengers: Doomsday.</p>
+            </div>
+            
+            <div class="road-container" id="roadContainer">
+                <!-- Dynamically populated road track -->
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quizSection" class="quiz-section">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-gamepad"></i> MCU Mastermind Quiz</h2>
+                <p>Select your difficulty level and prove your Marvel expertise!</p>
+            </div>
+
+            <div class="difficulty-selector" id="difficultySelector">
+                <button class="diff-btn active" data-diff="easy">Easy</button>
+                <button class="diff-btn" data-diff="medium">Medium</button>
+                <button class="diff-btn" data-diff="extreme">Extreme Hard</button>
+            </div>
+
+            <div class="quiz-card" id="quizCard">
+                <div class="quiz-header">
+                    <span id="questionProgress">Question 1 of 5</span>
+                    <span id="quizScore">Score: 0</span>
+                </div>
+                <div class="quiz-body" id="quizBody">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Story Modal Popup -->
+    <div class="modal-overlay" id="storyModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <div class="modal-body-content" id="modalBodyContent">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="marvel-footer">
+        <p>&copy; 2026 Marvel Guide. Designed for True Believers. Built with HTML5, CSS3, and JavaScript.</p>
+    </footer>
+
+    <script src="marvelweb.js"></script>
+</body>
+</html>
