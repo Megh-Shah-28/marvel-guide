@@ -498,7 +498,7 @@ body {
     transition: all 0.2s;
 }
 
-.option-btn.hover:not(:disabled) {
+.option-btn:hover:not(:disabled) {
     background: #2a3443;
     border-color: var(--marvel-red);
     color: var(--text-light);
